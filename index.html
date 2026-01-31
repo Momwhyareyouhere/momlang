@@ -3,36 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MomLang Repository</title>
+    <title>MomLang | Repository</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 800px; margin: 40px auto; padding: 0 20px; background-color: #f6f8fa; }
-        .container { background: white; border: 1px solid #e1e4e8; border-radius: 6px; padding: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        h1 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
-        code { background-color: rgba(27,31,35,0.05); border-radius: 3px; padding: 0.2em 0.4em; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 85%; }
-        pre { background-color: #f6f8fa; border-radius: 6px; padding: 16px; overflow: auto; border: 1px solid #dfe1e4; }
-        .footer { margin-top: 40px; font-size: 0.8em; color: #586069; text-align: center; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 850px; margin: 40px auto; padding: 0 20px; background-color: #f6f8fa; }
+        .card { background: white; padding: 40px; border: 1px solid #e1e4e8; border-radius: 6px; box-shadow: 0 1px 3px rgba(27,31,35,0.12); }
+        h1 { color: #d32f2f; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+        h3 { margin-top: 24px; }
+        .terminal { background: #0d1117; color: #c9d1d9; padding: 15px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 14px; position: relative; margin-bottom: 20px; }
+        code { background: rgba(27,31,35,0.05); padding: 0.2em 0.4em; border-radius: 3px; font-family: monospace; }
+        .command-desc { color: #586069; font-size: 0.9em; margin-bottom: 10px; display: block; }
+        .version-badge { background: #28a745; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.85em; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        table th, table td { text-align: left; padding: 8px; border-bottom: 1px solid #e1e4e8; }
+        .highlight { color: #d32f2f; font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🍪 MomLang Official Repository</h1>
-        <p>This is the official APT repository for <strong>MomLang</strong>, an x86_64 Assembly language for pantry management.</p>
-        
-        <h2>Installation</h2>
-        <p>To install MomLang on Ubuntu 24.04 (Noble), run the following commands:</p>
-        
-        <pre><code>curl -fsSL https://momwhyareyouhere.github.io/momlang/momlang.gpg | sudo gpg --dearmor -o /usr/share/keyrings/momlang-archive-keyring.gpg
 
-echo "deb [signed-by=/usr/share/keyrings/momlang-archive-keyring.gpg] https://momwhyareyouhere.github.io/momlang/ noble main" | sudo tee /etc/apt/sources.list.d/momlang.list
+<div class="card">
+    <h1>🍪 MomLang <span class="version-badge">v1.7</span></h1>
+    <p>The assembly-based language that treats code like a kitchen pantry. Manage your "cookies" with simple, strict instructions.</p>
+    
+    <h3>Installation</h3>
+    <span class="command-desc">1. Add the security keyring:</span>
+    <div class="terminal">sudo wget -O /usr/share/keyrings/momlang-archive-keyring.gpg https://momwhyareyouhere.github.io/momlang/momlang-archive-keyring.gpg</div>
+    
+    <span class="command-desc">2. Add the official repository:</span>
+    <div class="terminal">echo "deb [signed-by=/usr/share/keyrings/momlang-archive-keyring.gpg] https://momwhyareyouhere.github.io/momlang/ noble main" | sudo tee /etc/apt/sources.list.d/momlang.list</div>
+    
+    <span class="command-desc">3. Install the compiler:</span>
+    <div class="terminal">sudo apt update && sudo apt install momlang</div>
 
-sudo apt update && sudo apt install momlang</code></pre>
+    <h3>Compiler Usage</h3>
+    <table>
+        <tr><th>Command</th><th>Description</th></tr>
+        <tr><td><code>ml -v</code></td><td>Show current version</td></tr>
+        <tr><td><code>ml -h</code></td><td>Show help menu</td></tr>
+        <tr><td><code>ml run filename.mom</code></td><td>Execute a MomLang script</td></tr>
+        <tr><td><code>ml self-remove</code></td><td>Completely uninstall MomLang and clean repo files</td></tr>
+    </table>
 
-        <h2>Usage</h2>
-        <p>Once installed, verify the installation by running:</p>
-        <pre><code>ml</code></pre>
+    <h3>Language Syntax</h3>
+    <p>MomLang uses keywords to manipulate a single global variable called <span class="highlight">cookies</span>.</p>
+    <table>
+        <tr><th>Keyword</th><th>Action</th></tr>
+        <tr><td><code>REMEMBER [num]</code></td><td>Sets cookies to [num]</td></tr>
+        <tr><td><code>GATHER [num]</code></td><td>Adds [num] to cookies</td></tr>
+        <tr><td><code>DISCARD [num]</code></td><td>Subtracts [num] from cookies</td></tr>
+        <tr><td><code>show("text" c)</code></td><td>Prints text and the current cookie count</td></tr>
+    </table>
+
+    <h4 style="margin-top:20px;">Example Script (example.mom)</h4>
+    <div class="terminal" style="background: #f1f1f1; color: #333; border: 1px solid #ddd;">
+        REMEMBER 10<br>
+        GATHER 5<br>
+        DISCARD 2<br>
+        show("I have " c " cookies left")
     </div>
-    <div class="footer">
-        Generated by Momwhyareyouhere &bull; 2026
-    </div>
+</div>
+
+<div class="footer" style="text-align: center; margin-top: 30px; color: #666; font-size: 0.8em;">
+    Proudly powered by Assembly x86_64
+</div>
+
 </body>
 </html>
