@@ -1,13 +1,13 @@
 Package: momlang
-Version: 1.8
+Version: 1.9
 Architecture: amd64
 Maintainer: momwhyareyouhere <your@email.com>
 Priority: optional
 Section: utils
-Filename: pool/main/m/momlang/momlang_1.8_amd64.deb
-Size: 1894
-SHA256: 6cd86a202a1440699efa64715b57bc49e934d1236fda57653f0cfac574c6cac2
-SHA1: 0bf1ed168146ff98b7a58da767c285c679294f3a
-MD5sum: 7615f97dd6532802a2c84e6cb79faf4a
+Filename: pool/main/m/momlang/momlang_1.9_amd64.deb
+Size: 1892
+SHA256: 8f539f724e650c2a276bc901e934268c2a358d70ab7a5bd2b6361340c5b7a3dc
+SHA1: d79e1a8714256ea94204f4ebd225e7f3365c4f14
+MD5sum: dd59a97674105176f0aa74fc0d691b0a
 Description: MomLang: The language that makes sure you finish your cookies.
 
