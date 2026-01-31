@@ -8,12 +8,12 @@
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 850px; margin: 40px auto; padding: 0 20px; background-color: #f6f8fa; }
         .card { background: white; padding: 40px; border: 1px solid #e1e4e8; border-radius: 6px; box-shadow: 0 1px 3px rgba(27,31,35,0.12); }
         h1 { color: #d32f2f; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
-        h3 { margin-top: 24px; }
-        .terminal { background: #0d1117; color: #c9d1d9; padding: 15px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 14px; position: relative; margin-bottom: 20px; }
+        h3 { margin-top: 24px; border-left: 4px solid #d32f2f; padding-left: 10px; }
+        .terminal { background: #0d1117; color: #c9d1d9; padding: 15px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; font-size: 14px; position: relative; margin-bottom: 20px; border: 1px solid #30363d; }
         code { background: rgba(27,31,35,0.05); padding: 0.2em 0.4em; border-radius: 3px; font-family: monospace; }
-        .command-desc { color: #586069; font-size: 0.9em; margin-bottom: 10px; display: block; }
+        .command-desc { color: #586069; font-size: 0.9em; margin-bottom: 10px; display: block; font-weight: 600; }
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        table th, table td { text-align: left; padding: 8px; border-bottom: 1px solid #e1e4e8; }
+        table th, table td { text-align: left; padding: 12px; border-bottom: 1px solid #e1e4e8; }
         .highlight { color: #d32f2f; font-weight: bold; }
         .footer { text-align: center; margin-top: 30px; color: #666; font-size: 0.8em; }
     </style>
@@ -34,13 +34,17 @@
     <span class="command-desc">3. Install the compiler:</span>
     <div class="terminal">sudo apt update && sudo apt install momlang</div>
 
+    <h3>Upgrade to Newest Version</h3>
+    <p>If a new version is released, run these commands to force an update and bypass the local cache:</p>
+    <div class="terminal">sudo apt update -o Acquire::No-Cache=true<br>sudo apt upgrade momlang</div>
+
     <h3>Compiler Usage</h3>
     <table>
         <tr><th>Command</th><th>Description</th></tr>
         <tr><td><code>ml -v</code></td><td>Show current version</td></tr>
         <tr><td><code>ml -h</code></td><td>Show help menu</td></tr>
         <tr><td><code>ml run filename.mom</code></td><td>Execute a MomLang script</td></tr>
-        <tr><td><code>ml self-remove</code></td><td>Completely uninstall MomLang and clean repo files</td></tr>
+        <tr><td><code>ml self-remove</code></td><td>Completely uninstall and clean system</td></tr>
     </table>
 
     <h3>Language Syntax</h3>
@@ -53,7 +57,7 @@
         <tr><td><code>show("text" c)</code></td><td>Prints text and the current cookie count</td></tr>
     </table>
 
-    <h4 style="margin-top:20px;">Example Script (example.mom)</h4>
+    <h4 style="margin-top:20px;">Example Script (test.mom)</h4>
     <div class="terminal" style="background: #f1f1f1; color: #333; border: 1px solid #ddd;">
         REMEMBER 10<br>
         GATHER 5<br>
