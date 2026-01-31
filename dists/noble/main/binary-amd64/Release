@@ -1,0 +1,5 @@
+Component: main
+Origin: MomLang
+Label: MomLang Repo
+Architecture: amd64
+Description: Personal repository for MomLang

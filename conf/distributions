@@ -1,0 +1,7 @@
+Origin: MomLang
+Label: MomLang Repo
+Codename: noble
+Architectures: amd64
+Components: main
+Description: Personal repository for MomLang
+SignWith: 7F46F92A26FCD681DBD1612CB915F07A98DEC4F2

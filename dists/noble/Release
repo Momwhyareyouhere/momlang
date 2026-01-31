@@ -1,0 +1,19 @@
+Origin: MomLang
+Label: MomLang Repo
+Codename: noble
+Date: Sat, 31 Jan 2026 12:26:47 UTC
+Architectures: amd64
+Components: main
+Description: Personal repository for MomLang
+MD5Sum:
+ 5a3ea7b4fbd5c076ce6c0e4e240eaf57 431 main/binary-amd64/Packages
+ e929affa1892e7926a9dd394a694ae43 334 main/binary-amd64/Packages.gz
+ 97303d391b33ac15bbaded111f5f790f 117 main/binary-amd64/Release
+SHA1:
+ 0efcabbef3ae2992ab3c12c23c92229d9f2f57d9 431 main/binary-amd64/Packages
+ dd34fd38b0280026bdcbaf3f034e997da0d153b2 334 main/binary-amd64/Packages.gz
+ 19f79ab0c295230b12dc64c8d8023aadebc5e324 117 main/binary-amd64/Release
+SHA256:
+ 42c02a90478dd03fc0c8bec69e48b23d062f08d07efb3201aa3ab5fe7e910f69 431 main/binary-amd64/Packages
+ ad0c79522e44fc45d67049218475e0fd2c164916a2252c65af0609035b8bc177 334 main/binary-amd64/Packages.gz
+ 79a42f48b93f430d68386e8cec2e055e3f44762077a726a715464698c4591c71 117 main/binary-amd64/Release
